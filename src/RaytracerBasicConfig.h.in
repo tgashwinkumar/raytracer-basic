@@ -1,0 +1,2 @@
+#define RaytracerBasic_VERSION_MAJOR @RaytracerBasic_VERSION_MAJOR@
+#define RaytracerBasic_VERSION_MINOR @RaytracerBasic_VERSION_MINOR@
