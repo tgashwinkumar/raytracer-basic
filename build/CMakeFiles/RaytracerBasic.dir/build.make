@@ -52,7 +52,7 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Education\raytracer-basic\src
+CMAKE_SOURCE_DIR = E:\Education\raytracer-basic
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = E:\Education\raytracer-basic\build
@@ -68,38 +68,38 @@ include CMakeFiles/RaytracerBasic.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/RaytracerBasic.dir/flags.make
 
-CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.obj: CMakeFiles/RaytracerBasic.dir/flags.make
-CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.obj: CMakeFiles/RaytracerBasic.dir/includes_CXX.rsp
-CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.obj: E:/Education/raytracer-basic/src/RaytracerBasic.cpp
-CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.obj: CMakeFiles/RaytracerBasic.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Education\raytracer-basic\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.obj -MF CMakeFiles\RaytracerBasic.dir\RaytracerBasic.cpp.obj.d -o CMakeFiles\RaytracerBasic.dir\RaytracerBasic.cpp.obj -c E:\Education\raytracer-basic\src\RaytracerBasic.cpp
+CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj: CMakeFiles/RaytracerBasic.dir/flags.make
+CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj: CMakeFiles/RaytracerBasic.dir/includes_CXX.rsp
+CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj: ../src/main.cpp
+CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj: CMakeFiles/RaytracerBasic.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Education\raytracer-basic\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj -MF CMakeFiles\RaytracerBasic.dir\src\main.cpp.obj.d -o CMakeFiles\RaytracerBasic.dir\src\main.cpp.obj -c E:\Education\raytracer-basic\src\main.cpp
 
-CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Education\raytracer-basic\src\RaytracerBasic.cpp > CMakeFiles\RaytracerBasic.dir\RaytracerBasic.cpp.i
+CMakeFiles/RaytracerBasic.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RaytracerBasic.dir/src/main.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Education\raytracer-basic\src\main.cpp > CMakeFiles\RaytracerBasic.dir\src\main.cpp.i
 
-CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Education\raytracer-basic\src\RaytracerBasic.cpp -o CMakeFiles\RaytracerBasic.dir\RaytracerBasic.cpp.s
+CMakeFiles/RaytracerBasic.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RaytracerBasic.dir/src/main.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X86_64~2.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Education\raytracer-basic\src\main.cpp -o CMakeFiles\RaytracerBasic.dir\src\main.cpp.s
 
 # Object files for target RaytracerBasic
 RaytracerBasic_OBJECTS = \
-"CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.obj"
+"CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj"
 
 # External object files for target RaytracerBasic
 RaytracerBasic_EXTERNAL_OBJECTS =
 
-E:/Education/raytracer-basic/output/RaytracerBasic.exe: CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.obj
-E:/Education/raytracer-basic/output/RaytracerBasic.exe: CMakeFiles/RaytracerBasic.dir/build.make
-E:/Education/raytracer-basic/output/RaytracerBasic.exe: CMakeFiles/RaytracerBasic.dir/linklibs.rsp
-E:/Education/raytracer-basic/output/RaytracerBasic.exe: CMakeFiles/RaytracerBasic.dir/objects1.rsp
-E:/Education/raytracer-basic/output/RaytracerBasic.exe: CMakeFiles/RaytracerBasic.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Education\raytracer-basic\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable E:\Education\raytracer-basic\output\RaytracerBasic.exe"
+../output/RaytracerBasic.exe: CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj
+../output/RaytracerBasic.exe: CMakeFiles/RaytracerBasic.dir/build.make
+../output/RaytracerBasic.exe: CMakeFiles/RaytracerBasic.dir/linklibs.rsp
+../output/RaytracerBasic.exe: CMakeFiles/RaytracerBasic.dir/objects1.rsp
+../output/RaytracerBasic.exe: CMakeFiles/RaytracerBasic.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Education\raytracer-basic\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ..\output\RaytracerBasic.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\RaytracerBasic.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/RaytracerBasic.dir/build: E:/Education/raytracer-basic/output/RaytracerBasic.exe
+CMakeFiles/RaytracerBasic.dir/build: ../output/RaytracerBasic.exe
 .PHONY : CMakeFiles/RaytracerBasic.dir/build
 
 CMakeFiles/RaytracerBasic.dir/clean:
@@ -107,6 +107,6 @@ CMakeFiles/RaytracerBasic.dir/clean:
 .PHONY : CMakeFiles/RaytracerBasic.dir/clean
 
 CMakeFiles/RaytracerBasic.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\Education\raytracer-basic\src E:\Education\raytracer-basic\src E:\Education\raytracer-basic\build E:\Education\raytracer-basic\build E:\Education\raytracer-basic\build\CMakeFiles\RaytracerBasic.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\Education\raytracer-basic E:\Education\raytracer-basic E:\Education\raytracer-basic\build E:\Education\raytracer-basic\build E:\Education\raytracer-basic\build\CMakeFiles\RaytracerBasic.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/RaytracerBasic.dir/depend
 

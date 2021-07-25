@@ -1,0 +1,7 @@
+[
+{
+  "directory": "E:/Education/raytracer-basic/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X86_64~2.EXE  @CMakeFiles/RaytracerBasic.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\RaytracerBasic.dir\\src\\main.cpp.obj -c E:\\Education\\raytracer-basic\\src\\main.cpp",
+  "file": "E:/Education/raytracer-basic/src/main.cpp"
+}
+]

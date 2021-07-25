@@ -86,14 +86,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Education\raytracer-basic\build\CMakeFiles E:\Education\raytracer-basic\build\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	cd /d E:\Education\raytracer-basic\build && $(CMAKE_COMMAND) -E cmake_progress_start E:\Education\raytracer-basic\build\CMakeFiles E:\Education\raytracer-basic\build\include\Vec3\\CMakeFiles\progress.marks
+	cd /d E:\Education\raytracer-basic\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 include/Vec3/all
 	$(CMAKE_COMMAND) -E cmake_progress_start E:\Education\raytracer-basic\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 clean
+	cd /d E:\Education\raytracer-basic\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 include/Vec3/clean
 .PHONY : clean
 
 # The main clean target
@@ -102,55 +102,32 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d E:\Education\raytracer-basic\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 include/Vec3/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d E:\Education\raytracer-basic\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 include/Vec3/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d E:\Education\raytracer-basic\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named RaytracerBasic
+# Convenience name for target.
+include/Vec3/CMakeFiles/Vec3.dir/rule:
+	cd /d E:\Education\raytracer-basic\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 include/Vec3/CMakeFiles/Vec3.dir/rule
+.PHONY : include/Vec3/CMakeFiles/Vec3.dir/rule
 
-# Build rule for target.
-RaytracerBasic: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 RaytracerBasic
-.PHONY : RaytracerBasic
+# Convenience name for target.
+Vec3: include/Vec3/CMakeFiles/Vec3.dir/rule
+.PHONY : Vec3
 
 # fast build rule for target.
-RaytracerBasic/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RaytracerBasic.dir\build.make CMakeFiles/RaytracerBasic.dir/build
-.PHONY : RaytracerBasic/fast
-
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
-
-# target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RaytracerBasic.dir\build.make CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RaytracerBasic.dir\build.make CMakeFiles/RaytracerBasic.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\RaytracerBasic.dir\build.make CMakeFiles/RaytracerBasic.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+Vec3/fast:
+	cd /d E:\Education\raytracer-basic\build && $(MAKE) $(MAKESILENT) -f include\Vec3\CMakeFiles\Vec3.dir\build.make include/Vec3/CMakeFiles/Vec3.dir/build
+.PHONY : Vec3/fast
 
 # Help Target
 help:
@@ -160,10 +137,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... RaytracerBasic
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
+	@echo ... Vec3
 .PHONY : help
 
 
@@ -175,6 +149,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d E:\Education\raytracer-basic\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

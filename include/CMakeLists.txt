@@ -1,0 +1,1 @@
+add_library(Vec3 Vec3/vec3.h Vec3/color.h)

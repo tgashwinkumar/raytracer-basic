@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.obj"
-  "CMakeFiles/RaytracerBasic.dir/RaytracerBasic.cpp.obj.d"
-  "E:/Education/raytracer-basic/output/RaytracerBasic.exe"
-  "E:/Education/raytracer-basic/output/RaytracerBasic.exe.manifest"
-  "E:/Education/raytracer-basic/output/RaytracerBasic.pdb"
+  "../output/RaytracerBasic.exe"
+  "../output/RaytracerBasic.exe.manifest"
+  "../output/RaytracerBasic.pdb"
+  "CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj"
+  "CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj.d"
   "libRaytracerBasic.dll.a"
 )
 
