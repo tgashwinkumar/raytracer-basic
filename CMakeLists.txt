@@ -10,7 +10,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/../lib)
 
 include_directories("include")
 
-add_executable(${CMAKE_PROJECT_NAME} ./src/main.cpp ./include/Vec3/vec3.h ./include/Vec3/color.h)
+add_executable(${CMAKE_PROJECT_NAME} ./src/main.cpp ./include/vec3.h ./include/color.h)
 message("Project source dir:=${PROJECT_SOURCE_DIR}" )
 
 configure_file(./src/RaytracerBasicConfig.h.in ./src/RaytracerBasicConfig.h)

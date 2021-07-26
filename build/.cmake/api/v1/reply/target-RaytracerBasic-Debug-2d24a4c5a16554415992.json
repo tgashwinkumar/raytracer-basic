@@ -139,12 +139,12 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/Vec3/vec3.h",
+			"path" : "include/vec3.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/Vec3/color.h",
+			"path" : "include/color.h",
 			"sourceGroupIndex" : 1
 		}
 	],

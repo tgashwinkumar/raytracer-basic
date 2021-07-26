@@ -126,8 +126,9 @@ CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj: \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/ostream.tcc \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/istream \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/istream.tcc \
- E:/Education/raytracer-basic/include/Vec3/vec3.h \
+ E:/Education/raytracer-basic/include/vec3.h \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/cmath \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/math.h \
- E:/Education/raytracer-basic/include/Vec3/color.h \
- E:/Education/raytracer-basic/include/Vec3/vec3.h
+ E:/Education/raytracer-basic/include/color.h \
+ E:/Education/raytracer-basic/include/vec3.h \
+ E:/Education/raytracer-basic/include/ray.h

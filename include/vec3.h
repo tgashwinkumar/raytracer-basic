@@ -54,15 +54,14 @@ public:
         return *this *= 1 / k;
     }
 
-    double length() const
-    {
+    double length() const {
         return std::sqrt(length_squared());
     }
 
-    double length_squared() const
-    {
+    double length_squared() const {
         return e[0] * e[0] + e[1] * e[1] + e[2] * e[2];
     }
+
 };
 
 
@@ -90,7 +89,7 @@ inline Vec3 operator*(const Vec3 &v, double t){
     return t * v;
 }
 
-inline Vec3 operator/(Vec3 v, double t){
+inline Vec3 operator/(const Vec3& v, double t){
     return (1 / t) * v;
 }
 
