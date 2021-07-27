@@ -14,7 +14,7 @@ class Ray {
         Point3 getOrigin() { return origin; }
         Vec3 getDirection() { return direction; }
 
-        Point3 getPointAt(const double t){
+        Point3 getPointAt(const double t) const {
             return origin + t * direction;
         }
 };

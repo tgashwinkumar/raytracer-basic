@@ -131,4 +131,6 @@ CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj: \
  C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/x86_64-w64-mingw32/include/math.h \
  E:/Education/raytracer-basic/include/color.h \
  E:/Education/raytracer-basic/include/vec3.h \
+ E:/Education/raytracer-basic/include/ray.h \
+ E:/Education/raytracer-basic/include/sphere.h \
  E:/Education/raytracer-basic/include/ray.h

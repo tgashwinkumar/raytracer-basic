@@ -1,13 +1,20 @@
 #include<iostream>
 #include "vec3.h"
 #include "color.h"
-#include <ray.h>
+#include "ray.h"
+#include "sphere.h"
    
 
 Color3 getRayColor(Ray& r){
+    Sphere sph = Sphere(Point3(0,0,-1), 0.5);
+    auto t = sph.rayHitAt(r);
+    if(t > 0.0){
+        Vec3 surfaceNormal = unit_vector(r.getPointAt(t) - sph.centerPoint);
+        return 0.5*Color3(surfaceNormal.x() + 1, surfaceNormal.y() + 1, surfaceNormal.z() + 1);
+    }
     Vec3 unitDir = unit_vector(r.getDirection());
-    auto t = 0.5*(unitDir.y() + 1.0);
-    return (1.0 - t)*Color3(1.0, 1.0, 1.0) + t*Color3(1.0, 0.7, 0.2);
+    t = 0.5*(unitDir.y() + 1.0);
+    return (1.0 - t)*Color3(0.0, 0.0, 0.0) + t*Color3(1.0, 0.7, 0.2);
 } 
 
 int main(){

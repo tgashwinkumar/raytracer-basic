@@ -135,4 +135,6 @@ CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj
  E:/Education/raytracer-basic/include/color.h
  E:/Education/raytracer-basic/include/vec3.h
  E:/Education/raytracer-basic/include/ray.h
+ E:/Education/raytracer-basic/include/sphere.h
+ E:/Education/raytracer-basic/include/ray.h
 

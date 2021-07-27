@@ -4,3 +4,5 @@ mingw32-make
 cd ../output
 .\RaytracerBasic.exe > image.ppm
 pause
+image.ppm
+exit

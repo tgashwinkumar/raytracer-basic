@@ -133,6 +133,8 @@ CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj: ../src/main.cpp \
   C:/Program\ Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64-mingw32/include/math.h \
   ../include/color.h \
   ../include/vec3.h \
+  ../include/ray.h \
+  ../include/sphere.h \
   ../include/ray.h
 
 
@@ -399,3 +401,5 @@ C:/Program\ Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/x86_64-w64
 ../include/color.h:
 
 ../include/ray.h:
+
+../include/sphere.h:
