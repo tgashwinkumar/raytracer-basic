@@ -1,19 +1,17 @@
 #include<iostream>
-#include "vec3.h"
-#include "color.h"
-#include "ray.h"
-#include "sphere.h"
-   
 
-Color3 getRayColor(Ray& r){
-    Sphere sph = Sphere(Point3(0,0,-1), 0.5);
-    auto t = sph.rayHitAt(r);
-    if(t > 0.0){
-        Vec3 surfaceNormal = unit_vector(r.getPointAt(t) - sph.centerPoint);
-        return 0.5*Color3(surfaceNormal.x() + 1, surfaceNormal.y() + 1, surfaceNormal.z() + 1);
+#include "utils.h"
+#include "color.h"
+#include "sphere.h"
+#include "hittable_list.h"
+
+Color3 getRayColor(Ray& r, const Hittable& world){
+    HitRecord record;
+    if(world.isRayHit(r, 0, infinity, record)){
+        return 0.5*(record.normal + Color3(1.0,1.0,1.0));
     }
     Vec3 unitDir = unit_vector(r.getDirection());
-    t = 0.5*(unitDir.y() + 1.0);
+    auto t = 0.5*(unitDir.y() + 1.0);
     return (1.0 - t)*Color3(0.0, 0.0, 0.0) + t*Color3(1.0, 0.7, 0.2);
 } 
 
@@ -23,6 +21,10 @@ int main(){
 
     const int image_width = 400;
     const int image_height = static_cast<int>(image_width / aspect_ratio);
+
+    HittableList world;
+    world.add(make_shared<Sphere>(Point3(0,0,-1), 0.5));
+    world.add(make_shared<Sphere>(Point3(0, -100.5, -1), 100));
 
     auto viewport_height = 2.0;
     auto viewport_width = viewport_height * aspect_ratio;
@@ -41,7 +43,7 @@ int main(){
             auto u = double(i) / (image_width-1);
             auto v = double(j) / (image_height-1);
             Ray r(origin, lowerLeft + u*horizontal + v*vertical - origin);
-            Color3 pixelColor = getRayColor(r);
+            Color3 pixelColor = getRayColor(r, world);
             writeColor(std::cout, pixelColor);
         }
     }
