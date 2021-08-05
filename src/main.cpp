@@ -4,47 +4,51 @@
 #include "color.h"
 #include "sphere.h"
 #include "hittable_list.h"
+#include "camera.h"
 
-Color3 getRayColor(Ray& r, const Hittable& world){
+Color3 getRayColor(const Ray& r, const Hittable& world, int depth){
     HitRecord record;
-    if(world.isRayHit(r, 0, infinity, record)){
-        return 0.5*(record.normal + Color3(1.0,1.0,1.0));
+
+    if(depth <= 0)
+        return Color3(0.0, 0.0, 0.0);
+
+    if(world.isRayHit(r, 0, infinity, record)) {
+        Point3 target = record.point + record.normal + random_in_unit_sphere();
+        return 0.5*getRayColor(Ray(record.point, target - record.point), world, depth-1);
     }
-    Vec3 unitDir = unit_vector(r.getDirection());
+    Vec3 unitDir = unit_vector(r.direction);
     auto t = 0.5*(unitDir.y() + 1.0);
-    return (1.0 - t)*Color3(0.0, 0.0, 0.0) + t*Color3(1.0, 0.7, 0.2);
+    return (1.0 - t)*Color3(1.0, 1.0, 1.0) + t*Color3(0.5, 0.7, 1.0);
 } 
 
 int main(){
 
     const auto aspect_ratio = 16.0 / 9.0;
-
     const int image_width = 400;
     const int image_height = static_cast<int>(image_width / aspect_ratio);
+    const int samples_per_pixel = 100;
+    const int max_depth = 50;
 
     HittableList world;
     world.add(make_shared<Sphere>(Point3(0,0,-1), 0.5));
     world.add(make_shared<Sphere>(Point3(0, -100.5, -1), 100));
 
-    auto viewport_height = 2.0;
-    auto viewport_width = viewport_height * aspect_ratio;
-    auto focal_length = 1.0;
-
-    auto origin = Point3(0, 0, 0);
-    auto horizontal = Vec3(viewport_width, 0, 0);
-    auto vertical = Vec3(0, viewport_height, 0);
-    auto lowerLeft = origin - horizontal/2 - vertical/2 - Vec3(0, 0, focal_length);
-
+    Camera cam;
 
     std::cout << "P3\n" << image_width << " " << image_height << "\n255\n";
     for(int j = image_height-1; j >= 0; j--){
         std::cerr << "Scanning for " << j << " more inputs....." << "\r";
         for(int i = 0; i <= image_width-1; i++){
-            auto u = double(i) / (image_width-1);
-            auto v = double(j) / (image_height-1);
-            Ray r(origin, lowerLeft + u*horizontal + v*vertical - origin);
-            Color3 pixelColor = getRayColor(r, world);
-            writeColor(std::cout, pixelColor);
+            Color3 pixelColor(0,0,0);
+            for(int s = 0; s < samples_per_pixel; s++){
+                auto u = (i + random_double()) / (image_width-1);
+                auto v = (j + random_double()) / (image_height-1);
+                // auto u = i  / (image_width-1);
+                // auto v = j / (image_height-1);
+                Ray r = cam.getRay(u, v);
+                pixelColor += getRayColor(r, world, max_depth);
+            }
+            writeColor(std::cout, pixelColor, samples_per_pixel);
         }
     }
     std::cerr << "\r\nDone.";
