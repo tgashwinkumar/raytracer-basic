@@ -69,6 +69,11 @@ public:
     inline static Vec3 random(double min, double max){
         return Vec3(random_double(min, max), random_double(min, max), random_double(min, max));
     }
+
+    bool near_zero() const {
+        const auto s = 1e-8;
+        return fabs(this->e[0]) < s && fabs(this->e[1]) > s && fabs(this->e[2]) > s;
+    }
 };
 
 
@@ -121,6 +126,28 @@ Vec3 random_in_unit_sphere(){
         if(p.length_squared() >= 1) continue;
         return p;
     }
+}
+
+Vec3 random_unit_vector(){
+    return unit_vector(random_in_unit_sphere());
+}
+
+Vec3 random_in_hemisphere(const Vec3& normal){
+    Vec3 in_unit_sphere = random_in_unit_sphere();
+    if(dot(in_unit_sphere, normal) > 0.0)
+        return in_unit_sphere;
+    else return -in_unit_sphere;
+}
+
+Vec3 reflect(const Vec3& incident, const Vec3& normal){
+    return incident - 2 * dot(incident, normal) * normal;
+}
+
+Vec3 refract(const Vec3& uv, const Vec3& n, double etai_over_etat) {
+    auto cos_theta = fmin(dot(-uv, n), 1.0);
+    Vec3 r_out_perp = etai_over_etat * (uv + cos_theta * n);
+    Vec3 r_out_parallel = -std::sqrt(fabs(1.0 - r_out_perp.length_squared())) * n;
+    return r_out_perp + r_out_parallel;
 }
 
 using Point3 = Vec3;

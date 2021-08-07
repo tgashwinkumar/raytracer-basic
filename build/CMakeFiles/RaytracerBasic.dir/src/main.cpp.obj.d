@@ -175,4 +175,5 @@ CMakeFiles/RaytracerBasic.dir/src/main.cpp.obj: \
  E:/Education/raytracer-basic/include/hittable.h \
  E:/Education/raytracer-basic/include/hittable_list.h \
  E:/Education/raytracer-basic/include/camera.h \
- E:/Education/raytracer-basic/include/utils.h
+ E:/Education/raytracer-basic/include/utils.h \
+ E:/Education/raytracer-basic/include/material.h
